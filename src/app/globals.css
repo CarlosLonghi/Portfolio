@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --cyan-800: #155e75;
+  --cyan-500: #06b6d4;
+}
+
+::-webkit-scrollbar {
+  height: 0.25rem;
+  width: 0.25rem;
+  background: var(--cyan-800);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--cyan-500);
+  -webkit-border-radius: 1rem;
+}
