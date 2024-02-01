@@ -15,8 +15,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
+    <html lang="en" className={inter.className}>
+      <body className="bg-gray-100 text-gray-900 antialiased dark:bg-gray-950 dark:text-gray-100">
         <header className="flex justify-center bg-gray-100 px-4 py-6 text-gray-900 dark:bg-gray-900 dark:text-gray-100">
           <nav>
             <ul className="flex max-w-app items-center justify-between gap-4 md:gap-6">
@@ -55,9 +55,7 @@ export default function RootLayout({
             </ul>
           </nav>
         </header>
-        <main className="overflow-x-hidden bg-gray-100 text-gray-900 dark:bg-gray-950 dark:text-gray-100">
-          {children}
-        </main>
+        <main className="overflow-x-hidden">{children}</main>
       </body>
     </html>
   )
