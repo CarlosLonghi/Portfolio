@@ -7,39 +7,36 @@ const visible = {
   opacity: 1,
   y: 0,
   x: 0,
-  transition: { duration: 0.8 },
 }
 
 const animationLeftToRight = {
-  hidden: { opacity: 0, x: 100 },
+  hidden: { opacity: 0, x: 40 },
   visible,
 }
 const animationBottomToTop = {
-  hidden: { opacity: 0, y: 100 },
+  hidden: { opacity: 0, y: 40 },
   visible,
 }
 const animationTopToBottom = {
-  hidden: { opacity: 0, y: -100 },
-  visible,
-}
-
-const item = {
-  hidden: { x: 60, opacity: 0 },
+  hidden: { opacity: 0, y: -40 },
   visible,
 }
 
 export default function Home() {
   return (
     <motion.section
-      className="m-auto flex min-h-[calc(100vh-4.5rem)] max-w-app flex-col items-center justify-center gap-16 px-4 py-4 sm:px-8 md:px-10"
+      className="m-auto flex min-h-[calc(100vh-8.05rem)] max-w-app flex-col items-center justify-center gap-16 px-4 py-4 sm:px-8 md:px-10"
       initial="hidden"
       animate="visible"
-      variants={{ visible: { transition: { staggerChildren: 0.8 } } }}
+      variants={{ visible: { transition: { staggerChildren: 2.4 } } }}
     >
-      <div className="flex flex-col items-center gap-8 text-center md:flex-row md:text-start">
+      <motion.div
+        className="flex flex-col items-center gap-8 text-center md:flex-row md:text-start"
+        variants={{ visible: { transition: { staggerChildren: 0.2 } } }}
+      >
         <motion.a
           variants={animationTopToBottom}
-          className="h-40 w-40 overflow-hidden rounded-full border-2 border-cyan-300 transition duration-200 ease-linear hover:shadow-lg hover:shadow-cyan-700"
+          className="h-32 w-32 overflow-hidden rounded-full border-2 border-cyan-300 transition-shadow duration-300 hover:shadow-lg hover:shadow-cyan-600 md:h-40 md:w-40"
           href="https://github.com/CarlosLonghi"
           target="_blank"
           rel="noopener noreferrer"
@@ -74,9 +71,9 @@ export default function Home() {
             , e atualmente estou buscando minha vaga Home Office.🏡
           </motion.p>
         </div>
-      </div>
+      </motion.div>
 
-      <motion.div variants={item}>
+      <motion.div variants={animationLeftToRight}>
         <a
           href="/projects"
           className="rounded bg-cyan-700 px-4 py-3 font-medium shadow-inner transition ease-linear hover:bg-cyan-800 hover:shadow-cyan-900"
@@ -84,6 +81,15 @@ export default function Home() {
           Meus Projetos
         </a>
       </motion.div>
+
+      <div className="min-h-52">
+        <a href="https://git.io/streak-stats">
+          <img
+            src="https://github-readme-streak-stats.herokuapp.com?user=CarlosLonghi&border_radius=5&locale=pt_BR&date_format=j%20M%5B%20Y%5D&mode=weekly&background=030712&stroke=06B6D4&border=06B6D4&ring=22D3EE&sideNums=A5F3FC&sideLabels=22D3EE&dates=CFFAFE&currStreakNum=CFFAFE&fire=EA580C&currStreakLabel=22D3EE"
+            alt="GitHub Streak"
+          />
+        </a>
+      </div>
     </motion.section>
   )
 }
