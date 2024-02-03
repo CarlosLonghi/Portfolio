@@ -1,14 +1,13 @@
 'use client'
 import { motion } from 'framer-motion'
 
-import RepositoryCard from '@/components/RepositoryCard'
+import { CaretDoubleRight } from '@phosphor-icons/react'
 
 const visible = {
   opacity: 1,
   y: 0,
   x: 0,
 }
-
 const animationLeftToRight = {
   hidden: { opacity: 0, x: 40 },
   visible,
@@ -25,10 +24,10 @@ const animationTopToBottom = {
 export default function Home() {
   return (
     <motion.section
-      className="m-auto flex min-h-[calc(100vh-8.05rem)] max-w-app flex-col items-center justify-center gap-16 px-4 py-4 sm:px-8 md:px-10"
+      className="m-auto flex min-h-[calc(100vh-8.05rem)] max-w-app flex-col items-center justify-center gap-6 px-4 py-4 sm:px-8 md:gap-16 md:px-10"
       initial="hidden"
       animate="visible"
-      variants={{ visible: { transition: { staggerChildren: 2.4 } } }}
+      variants={{ visible: { transition: { staggerChildren: 2 } } }}
     >
       <motion.div
         className="flex flex-col items-center gap-8 text-center md:flex-row md:text-start"
@@ -36,7 +35,7 @@ export default function Home() {
       >
         <motion.a
           variants={animationTopToBottom}
-          className="h-32 w-32 overflow-hidden rounded-full border-2 border-cyan-300 transition-shadow duration-300 hover:shadow-lg hover:shadow-cyan-600 md:h-40 md:w-40"
+          className="h-32 w-32 overflow-hidden rounded-full border-2 border-cyan-300 transition-shadow duration-700 ease-out hover:shadow-2xl hover:shadow-cyan-600 md:h-40 md:w-40"
           href="https://github.com/CarlosLonghi"
           target="_blank"
           rel="noopener noreferrer"
@@ -44,7 +43,10 @@ export default function Home() {
           <img src="https://github.com/CarlosLonghi.png" />
         </motion.a>
 
-        <div className="md:flex-1">
+        <motion.div
+          variants={{ visible: { transition: { staggerChildren: 0.6 } } }}
+          className="md:flex-1"
+        >
           <motion.h4
             variants={animationLeftToRight}
             className="mb-4 text-4xl font-semibold"
@@ -70,15 +72,16 @@ export default function Home() {
             </a>
             , e atualmente estou buscando minha vaga Home Office.🏡
           </motion.p>
-        </div>
+        </motion.div>
       </motion.div>
 
       <motion.div variants={animationLeftToRight}>
         <a
           href="/projects"
-          className="rounded bg-cyan-700 px-4 py-3 font-medium shadow-inner transition ease-linear hover:bg-cyan-800 hover:shadow-cyan-900"
+          className="flex items-center gap-2 rounded bg-cyan-700 px-4 py-3 font-medium shadow-inner transition ease-linear hover:bg-cyan-800 hover:shadow-cyan-950 dark:hover:text-cyan-200"
         >
           Meus Projetos
+          <CaretDoubleRight className="h-5 w-5" />
         </a>
       </motion.div>
 
