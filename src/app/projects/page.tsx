@@ -29,14 +29,12 @@ export default function Projects() {
       initial="hidden"
       animate="visible"
     >
-      <div className="my-8 space-y-8 rounded-lg bg-gray-900 px-4 py-6 shadow-inner shadow-gray-950">
-        <h2 className="text-2xl font-semibold dark:text-gray-400">
-          Meus Projetos
-        </h2>
+      <div className="space-y-8 rounded-lg bg-gray-900 px-4 pb-12 pt-10 shadow-inner shadow-gray-950 md:px-8">
+        <h2 className="text-3xl font-semibold">Meus Projetos</h2>
 
         <motion.section
           variants={container}
-          className="mb-3 flex max-w-4xl  flex-wrap justify-center gap-x-4 gap-y-6 sm:justify-between"
+          className="mb-3 flex max-w-app flex-wrap justify-center gap-4 sm:gap-8 md:gap-12"
         >
           <motion.article variants={card}>
             <RepositoryCard
