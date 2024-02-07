@@ -14,7 +14,7 @@ export default function RepositoryCard({
   linkGithub,
 }: RepositoryCardProps) {
   return (
-    <div className="flex min-h-44 w-60 flex-col rounded border border-cyan-400 px-4 py-6 shadow-inner shadow-cyan-600">
+    <div className="flex min-h-44 w-60 flex-col rounded border border-cyan-500 px-4 py-5 shadow-inner shadow-cyan-800">
       <h4 className="mb-2 text-xl font-bold dark:text-cyan-50">{title}</h4>
       <p className="line-clamp-4 text-sm text-gray-700 dark:text-cyan-100">
         {description}

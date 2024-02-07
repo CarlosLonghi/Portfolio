@@ -1,5 +1,6 @@
 'use client'
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 
 import { CaretDoubleRight } from '@phosphor-icons/react'
 
@@ -76,13 +77,13 @@ export default function Home() {
       </motion.div>
 
       <motion.div variants={animationLeftToRight}>
-        <a
+        <Link
           href="/projects"
           className="flex items-center gap-2 rounded bg-cyan-700 px-4 py-3 font-medium shadow-inner transition ease-linear hover:bg-cyan-800 hover:shadow-cyan-950 dark:hover:text-cyan-200"
         >
           Meus Projetos
           <CaretDoubleRight className="h-5 w-5" />
-        </a>
+        </Link>
       </motion.div>
 
       <div className="min-h-52">
