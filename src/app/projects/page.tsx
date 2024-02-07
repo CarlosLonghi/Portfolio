@@ -38,7 +38,7 @@ export default function Projects() {
       animate="visible"
       variants={container}
     >
-      <div className="space-y-8 rounded-lg bg-gradient-to-br from-gray-900 to-gray-950 px-4 pb-12 pt-8 shadow-inner shadow-gray-950 md:px-8">
+      <div className="space-y-8 rounded-lg bg-gradient-to-br from-gray-900 to-gray-950 px-4 pb-12 pt-6 shadow-inner shadow-gray-950 md:px-8">
         <motion.div className="md:w-1/2" variants={animationLeftToRight}>
           <h2 className="mb-2 text-3xl font-semibold">Projetos</h2>
           <p className="mb-4 w-full text-sm text-gray-400">
@@ -49,7 +49,7 @@ export default function Projects() {
             href="https://github.com/CarlosLonghi?tab=repositories"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-fit text-sm text-cyan-100 underline decoration-cyan-400 underline-offset-8 transition hover:text-cyan-400 hover:decoration-cyan-500"
+            className="w-fit py-2 text-sm font-semibold text-cyan-100 underline decoration-cyan-400 underline-offset-8 transition hover:text-cyan-400 hover:decoration-cyan-500"
           >
             Ver Repositórios no Github
           </a>
