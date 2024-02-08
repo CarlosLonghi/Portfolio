@@ -10,7 +10,6 @@ const container = {
     transition: {
       delayChildren: 0.3,
       staggerChildren: 0.5,
-      Animation,
     },
   },
 }
@@ -33,12 +32,12 @@ const card = {
 export default function Projects() {
   return (
     <motion.section
-      className="m-auto flex min-h-[calc(100vh-8.05rem)] max-w-app flex-col justify-center px-4 sm:px-8 md:px-10"
+      className="m-auto flex min-h-[calc(100vh-8.05rem)] max-w-app flex-col justify-center px-4 sm:px-6 md:px-4"
       initial="hidden"
       animate="visible"
       variants={container}
     >
-      <div className="space-y-8 rounded-lg bg-gradient-to-br from-gray-900 to-gray-950 px-4 pb-12 pt-6 shadow-inner shadow-gray-950 md:px-8">
+      <div className="space-y-10 rounded-lg px-6 pb-12 pt-6 sm:px-12">
         <motion.div className="md:w-1/2" variants={animationLeftToRight}>
           <h2 className="mb-2 text-3xl font-semibold">Projetos</h2>
           <p className="mb-4 w-full text-sm text-gray-400">
@@ -55,7 +54,7 @@ export default function Projects() {
           </a>
         </motion.div>
 
-        <section className="mb-3 flex max-w-app flex-wrap justify-center gap-4 sm:gap-8 md:gap-12">
+        <div className="mb-3 flex max-w-app flex-wrap justify-center gap-x-6 gap-y-6 sm:gap-y-8 md:gap-y-8 lg:justify-between">
           <motion.article variants={card}>
             <RepositoryCard
               title="Popcorn Polls"
@@ -89,7 +88,7 @@ export default function Projects() {
               linkSite="https://rocketnotes-c4du-dev.netlify.app/"
             />
           </motion.article>
-        </section>
+        </div>
       </div>
     </motion.section>
   )

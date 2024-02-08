@@ -5,7 +5,7 @@ const config: Config = {
   theme: {
     extend: {
       maxWidth: {
-        app: '60rem',
+        app: '58rem',
       },
     },
   },

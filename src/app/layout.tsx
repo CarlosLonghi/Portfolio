@@ -21,7 +21,7 @@ export default function RootLayout({
     <html lang="en" className={inter.className}>
       <head />
       <body className="bg-gray-100 text-gray-900 antialiased dark:bg-gray-950 dark:text-gray-100">
-        <header className="flex justify-center bg-gray-100 px-4 py-6 text-gray-900 dark:bg-gray-900 dark:text-gray-100">
+        <header className="flex justify-center bg-gray-100 bg-gradient-to-br px-4 py-6 text-gray-900 dark:from-gray-900 dark:to-gray-950 dark:text-gray-100">
           <nav>
             <ul className="flex max-w-app items-center justify-between gap-4 md:gap-6">
               <li>
@@ -62,7 +62,7 @@ export default function RootLayout({
 
         <main className="overflow-x-hidden">{children}</main>
 
-        <footer className="flex justify-center bg-gray-100 px-4 py-4 text-gray-900 dark:bg-gray-900 dark:text-gray-100">
+        <footer className="flex justify-center bg-gray-100 bg-gradient-to-tl px-4 py-4 text-gray-900 dark:from-gray-900 dark:to-gray-950 dark:text-gray-100">
           <ul className="flex items-center gap-6">
             <li>
               <Github />
