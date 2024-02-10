@@ -2,25 +2,35 @@
 import RepositoryCard from '@/components/RepositoryCard'
 import { motion } from 'framer-motion'
 
-const container = {
-  hidden: { opacity: 0, scale: 0.8 },
+const animationOrchestration = {
   visible: {
     opacity: 1,
-    scale: 1,
     transition: {
-      delayChildren: 0.3,
+      when: 'beforeChildren',
       staggerChildren: 0.5,
     },
   },
+  hidden: {
+    opacity: 0,
+    transition: {
+      when: 'afterChildren',
+    },
+  },
 }
+
 const animationLeftToRight = {
-  hidden: { opacity: 0, x: 40 },
+  hidden: { opacity: 0, x: 30 },
   visible: {
     opacity: 1,
     y: 0,
     x: 0,
+    transition: {
+      ease: 'easeInOut',
+      duration: 0.8,
+    },
   },
 }
+
 const card = {
   hidden: { y: 20, opacity: 0 },
   visible: {
@@ -35,7 +45,6 @@ export default function Projects() {
       className="m-auto flex min-h-[calc(100vh-8.05rem)] max-w-app flex-col justify-center px-4 sm:px-6 md:px-4"
       initial="hidden"
       animate="visible"
-      variants={container}
     >
       <div className="space-y-10 rounded-lg px-6 pb-12 pt-6 sm:px-12">
         <motion.div className="md:w-1/2" variants={animationLeftToRight}>
@@ -54,7 +63,10 @@ export default function Projects() {
           </a>
         </motion.div>
 
-        <div className="mb-3 flex max-w-app flex-wrap justify-center gap-x-6 gap-y-6 sm:gap-y-8 md:gap-y-8 lg:justify-between">
+        <motion.div
+          variants={animationOrchestration}
+          className="mb-3 flex max-w-app flex-wrap justify-center gap-x-6 gap-y-6 sm:gap-y-8 md:gap-y-8 lg:justify-between"
+        >
           <motion.article variants={card}>
             <RepositoryCard
               title="Popcorn Polls"
@@ -88,7 +100,7 @@ export default function Projects() {
               linkSite="https://rocketnotes-c4du-dev.netlify.app/"
             />
           </motion.article>
-        </div>
+        </motion.div>
       </div>
     </motion.section>
   )
