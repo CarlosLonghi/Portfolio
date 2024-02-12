@@ -21,7 +21,7 @@ export default function RepositoryCard({
       </p>
       <div className="ml-auto mt-auto flex gap-3">
         <a
-          className="rounded-full bg-gray-900 p-2 font-semibold text-gray-500 shadow-md shadow-gray-950 transition duration-300 ease-in hover:scale-110 group-hover:text-cyan-500 group-hover:shadow-cyan-800"
+          className="rounded-full bg-gray-900 p-2 font-semibold text-gray-500 shadow-md shadow-gray-950 transition duration-300 ease-in hover:shadow-cyan-800 group-hover:text-cyan-500"
           href={linkGithub}
           target="_blank"
           rel="noopener noreferrer"
@@ -30,7 +30,7 @@ export default function RepositoryCard({
         </a>
         {linkSite && (
           <a
-            className="rounded-full bg-gray-900 p-2 font-semibold text-gray-500 shadow-md shadow-gray-950 transition duration-300 ease-in hover:scale-110 group-hover:text-cyan-500 group-hover:shadow-cyan-800"
+            className="rounded-full bg-gray-900 p-2 font-semibold text-gray-500 shadow-md shadow-gray-950 transition duration-300 ease-in hover:shadow-cyan-800 group-hover:text-cyan-500"
             href={linkSite}
             target="_blank"
             rel="noopener noreferrer"

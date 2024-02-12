@@ -12,7 +12,7 @@ const Link = ({ href, ...props }: any) => {
   return (
     <NextLink href={href} passHref legacyBehavior>
       <NavigationMenu.Link
-        className="rounded px-3 py-2 text-cyan-100 shadow-lg transition duration-300 ease-in hover:text-cyan-400 hover:shadow-cyan-950 data-[active]:bg-gray-950  data-[active]:text-cyan-400 hover:dark:bg-gray-950"
+        className="rounded px-3 py-2 text-cyan-100 shadow-lg transition duration-300 ease-in hover:text-cyan-400 hover:shadow-cyan-950 data-[active]:bg-gray-950 data-[active]:text-cyan-400 hover:dark:bg-gray-950"
         active={isActive}
         {...props}
       />
@@ -30,6 +30,9 @@ export function Navigation() {
           </NavigationMenu.Item>
           <NavigationMenu.Item>
             <Link href="/projects">Projetos</Link>
+          </NavigationMenu.Item>
+          <NavigationMenu.Item>
+            <Link href="/career">Carreira</Link>
           </NavigationMenu.Item>
         </NavigationMenu.List>
       </NavigationMenu.Root>

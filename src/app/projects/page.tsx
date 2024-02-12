@@ -78,6 +78,15 @@ export default function Projects() {
 
           <motion.article variants={card}>
             <RepositoryCard
+              title="Rocket Notes"
+              description="Aplicação para salvar suas Anotações e Links."
+              linkGithub="https://github.com/CarlosLonghi/Rocket_Notes"
+              linkSite="https://rocketnotes-c4du-dev.netlify.app/"
+            />
+          </motion.article>
+
+          <motion.article variants={card}>
+            <RepositoryCard
               title="Habits App"
               description="Aplicação Web e Mobile para planejar e gerenciar seus Hábitos diários."
               linkGithub="https://github.com/CarlosLonghi/HabitsApp"
@@ -94,10 +103,17 @@ export default function Projects() {
 
           <motion.article variants={card}>
             <RepositoryCard
-              title="Rocket Notes"
-              description="Aplicação para salvar suas Anotações e Links."
-              linkGithub="https://github.com/CarlosLonghi/Rocket_Notes"
-              linkSite="https://rocketnotes-c4du-dev.netlify.app/"
+              title="Pomodoro"
+              description="Aplicação para execultar tarefas usando a metodologia Pomodoro"
+              linkGithub="https://github.com/CarlosLonghi/Pomodoro"
+            />
+          </motion.article>
+
+          <motion.article variants={card}>
+            <RepositoryCard
+              title="Dashboard"
+              description="Dashboard usando React com Tailwindcss"
+              linkGithub="https://github.com/CarlosLonghi/Dashboard_Tailwindcss"
             />
           </motion.article>
         </motion.div>
