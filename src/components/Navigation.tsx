@@ -12,7 +12,7 @@ const Link = ({ href, ...props }: any) => {
   return (
     <NextLink href={href} passHref legacyBehavior>
       <NavigationMenu.Link
-        className="border-b-2 border-solid border-transparent px-4 text-lg font-semibold shadow-lg transition duration-300 ease-in hover:text-cyan-500 data-[active]:border-cyan-500 data-[active]:text-cyan-400 md:pb-[25px] dark:text-cyan-100/50"
+        className="border-b-2 border-solid border-transparent px-4 text-lg font-semibold shadow-lg transition duration-200 ease-in hover:text-cyan-500 data-[active]:border-cyan-500 data-[active]:text-cyan-400 md:pb-[25px] dark:text-cyan-100/50"
         active={isActive}
         {...props}
       />

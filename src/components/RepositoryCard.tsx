@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import { GithubLogo, Globe } from '@phosphor-icons/react'
 
 interface RepositoryCardProps {
@@ -7,6 +8,14 @@ interface RepositoryCardProps {
   linkGithub?: string
 }
 
+const card = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+  },
+}
+
 export default function RepositoryCard({
   title,
   description,
@@ -14,7 +23,10 @@ export default function RepositoryCard({
   linkGithub,
 }: RepositoryCardProps) {
   return (
-    <div className="group flex min-h-48 w-60 flex-col rounded border border-cyan-500 px-4 py-5 shadow-inner shadow-cyan-800">
+    <motion.article
+      variants={card}
+      className="group flex min-h-48 w-60 flex-col rounded border border-cyan-500 px-4 py-5 shadow-inner shadow-cyan-800"
+    >
       <h4 className="mb-2 text-xl font-bold dark:text-cyan-50">{title}</h4>
       <p className="line-clamp-4 text-sm text-gray-700 dark:text-cyan-100">
         {description}
@@ -39,6 +51,6 @@ export default function RepositoryCard({
           </a>
         )}
       </div>
-    </div>
+    </motion.article>
   )
 }
