@@ -12,7 +12,7 @@ const Link = ({ href, ...props }: any) => {
   return (
     <NextLink href={href} passHref legacyBehavior>
       <NavigationMenu.Link
-        className="border-b-2 border-solid border-transparent px-4 text-lg font-semibold shadow-lg transition duration-200 ease-in hover:text-cyan-500 data-[active]:border-cyan-500 data-[active]:text-cyan-400 md:pb-[25px] dark:text-cyan-100/50"
+        className="border-b-2 border-solid border-transparent px-4 text-lg font-semibold text-gray-800/60 transition duration-200 ease-in hover:text-gray-800/90 data-[active]:border-gray-700 data-[active]:text-gray-800 md:pb-[26px] dark:text-cyan-100/50 dark:hover:text-cyan-500 dark:data-[active]:border-cyan-500 dark:data-[active]:text-cyan-400"
         active={isActive}
         {...props}
       />
@@ -22,7 +22,7 @@ const Link = ({ href, ...props }: any) => {
 
 export function Navigation() {
   return (
-    <header className="flex justify-center bg-gray-100 bg-gradient-to-br px-4 py-6 dark:from-gray-900 dark:to-gray-950">
+    <header className="fro-gray-100 flex justify-center bg-gradient-to-b from-gray-200 to-gray-400 px-4 py-6 dark:from-gray-900 dark:to-gray-950">
       <NavigationMenu.Root>
         <NavigationMenu.List className="flex max-w-app items-center justify-between gap-4 md:gap-6">
           <NavigationMenu.Item>

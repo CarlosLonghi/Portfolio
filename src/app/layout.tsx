@@ -20,13 +20,13 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.className}>
       <head />
-      <body className="bg-gray-100 text-gray-900 antialiased dark:bg-gray-950 dark:text-gray-100">
+      <body className="bg-gray-300 text-gray-900 antialiased dark:bg-gray-950 dark:text-gray-100">
         <Navigation />
 
         <main className="overflow-x-hidden">{children}</main>
 
-        <footer className="flex justify-center bg-gray-100 bg-gradient-to-tl px-4 py-4 text-gray-900 dark:from-gray-900 dark:to-gray-950 dark:text-gray-100">
-          <ul className="flex items-center gap-6">
+        <footer className="flex justify-center bg-gradient-to-t from-gray-400 to-gray-300 px-4 py-8 text-gray-900 dark:from-cyan-950 dark:to-gray-950 dark:text-gray-100">
+          <ul className="flex items-center gap-8">
             <li>
               <Github />
             </li>

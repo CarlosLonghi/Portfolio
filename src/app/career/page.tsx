@@ -38,7 +38,7 @@ const animationLeftToRight = {
 export default function Carrer() {
   return (
     <motion.section
-      className="m-auto min-h-[calc(100vh-8.29rem)] max-w-app px-4 pt-14 sm:px-6 md:px-4"
+      className="m-auto min-h-[calc(100vh-10.47rem)] max-w-app px-4 pt-14 sm:px-6 md:px-4"
       initial="hidden"
       animate="visible"
     >
