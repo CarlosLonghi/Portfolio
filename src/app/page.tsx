@@ -47,7 +47,7 @@ const animationOrchestration = {
 export default function Home() {
   return (
     <motion.section
-      className="m-auto flex min-h-[calc(100vh-8.05rem)] max-w-app flex-col items-center justify-center gap-6 px-4 py-4 sm:px-8 md:gap-16 md:px-10"
+      className="m-auto flex min-h-[calc(100vh-8.29rem)] max-w-app flex-col items-center justify-center gap-6 px-4 py-4 sm:px-8 md:gap-16 md:px-10"
       initial="hidden"
       animate="visible"
       variants={animationOrchestration}

@@ -1,5 +1,6 @@
 'use client'
 import RepositoryCard from '@/components/RepositoryCard'
+import { GithubLogo } from '@phosphor-icons/react'
 import { motion } from 'framer-motion'
 
 const animationOrchestration = {
@@ -42,13 +43,16 @@ const card = {
 export default function Projects() {
   return (
     <motion.section
-      className="m-auto flex min-h-[calc(100vh-8.05rem)] max-w-app flex-col justify-center px-4 sm:px-6 md:px-4"
+      className="m-auto min-h-[calc(100vh-8.29rem)] max-w-app px-4 pt-14 sm:px-6 md:px-4"
       initial="hidden"
       animate="visible"
     >
       <div className="space-y-10 rounded-lg px-6 pb-12 pt-6 sm:px-12">
         <motion.div className="md:w-1/2" variants={animationLeftToRight}>
-          <h2 className="mb-2 text-3xl font-semibold">Projetos</h2>
+          <div className="flex items-center gap-4">
+            <h2 className="mb-2 text-3xl font-semibold">Projetos</h2>
+            <GithubLogo className="-mt-1 h-8 w-8 text-cyan-500" />
+          </div>
           <p className="mb-4 w-full text-sm text-gray-400">
             Alguns dos meus principais projetos, como aplicações Web
             responsivas, aplicações Mobile e mais.
