@@ -8,8 +8,8 @@ export function Github() {
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="25"
-        height="25"
+        width="30"
+        height="30"
         fill="currentColor"
         viewBox="0 0 256 256"
         data-darkreader-inline-fill=""
@@ -61,7 +61,7 @@ export function Github() {
           data-darkreader-inline-stroke=""
         ></path>
       </svg>
-      <span>Github</span>
+      <span className="hidden sm:block">Github</span>
     </a>
   )
 }
@@ -76,8 +76,8 @@ export function Linkedin() {
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="25"
-        height="25"
+        width="30"
+        height="30"
         fill="currentColor"
         viewBox="0 0 256 256"
         data-darkreader-inline-fill=""
@@ -131,7 +131,7 @@ export function Linkedin() {
         ></path>
         <circle cx="88" cy="80" r="12"></circle>
       </svg>
-      <span>Linkedin</span>
+      <span className="hidden sm:block">Linkedin</span>
     </a>
   )
 }
@@ -146,8 +146,8 @@ export function Instagram() {
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="25"
-        height="25"
+        width="30"
+        height="30"
         fill="currentColor"
         viewBox="0 0 256 256"
         data-darkreader-inline-fill=""
@@ -178,7 +178,7 @@ export function Instagram() {
         ></rect>
         <circle cx="180" cy="76" r="12"></circle>
       </svg>
-      <span>Instagram</span>
+      <span className="hidden sm:block">Instagram</span>
     </a>
   )
 }

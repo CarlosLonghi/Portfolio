@@ -11,7 +11,7 @@ const animationOrchestration = {
     transition: {
       when: 'beforeChildren',
       staggerChildren: 0.3,
-      delay: 0.5,
+      delay: 0.4,
     },
   },
   hidden: {
@@ -38,14 +38,16 @@ const animationLeftToRight = {
 export default function Carrer() {
   return (
     <motion.section
-      className="m-auto min-h-[calc(100vh-10.47rem)] max-w-app px-4 pt-4 sm:px-6 md:px-4 md:pt-14"
+      className="m-auto min-h-[calc(100vh-10.47rem)] max-w-app px-6 pb-8 pt-10 sm:px-10 md:px-12 md:pt-14"
       initial="hidden"
       animate="visible"
     >
-      <div className="space-y-10 rounded-lg px-6 pb-12 pt-6 sm:px-12">
+      <div className="space-y-10 rounded-lg">
         <motion.div className="md:w-1/2" variants={animationLeftToRight}>
           <div className="flex items-center gap-4">
-            <h2 className="mb-2 text-3xl font-semibold">Carreira</h2>
+            <h2 className="mb-2 text-2xl font-semibold md:text-3xl">
+              Carreira
+            </h2>
             <Steps className="h-8 w-8 text-gray-700 dark:text-cyan-500" />
           </div>
           <p className="mb-4 w-full text-sm text-gray-800 dark:text-gray-400">
