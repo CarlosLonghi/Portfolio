@@ -22,7 +22,7 @@ const Link = ({ href, ...props }: any) => {
 
 export function Navigation() {
   return (
-    <header className="fro-gray-100 flex justify-center bg-gradient-to-b from-gray-200 to-gray-400 px-4 py-6 dark:from-gray-900 dark:to-gray-950">
+    <header className="fro-gray-100 flex justify-center bg-gradient-to-b from-gray-300 to-gray-400 px-4 py-6 dark:bg-gradient-to-br dark:from-gray-900 dark:to-gray-950">
       <NavigationMenu.Root>
         <NavigationMenu.List className="flex max-w-app items-center justify-between gap-4 md:gap-6">
           <NavigationMenu.Item>

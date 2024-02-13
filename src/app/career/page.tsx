@@ -38,7 +38,7 @@ const animationLeftToRight = {
 export default function Carrer() {
   return (
     <motion.section
-      className="m-auto min-h-[calc(100vh-10.47rem)] max-w-app px-4 pt-14 sm:px-6 md:px-4"
+      className="m-auto min-h-[calc(100vh-10.47rem)] max-w-app px-4 pt-4 sm:px-6 md:px-4 md:pt-14"
       initial="hidden"
       animate="visible"
     >
@@ -46,16 +46,16 @@ export default function Carrer() {
         <motion.div className="md:w-1/2" variants={animationLeftToRight}>
           <div className="flex items-center gap-4">
             <h2 className="mb-2 text-3xl font-semibold">Carreira</h2>
-            <Steps className="h-8 w-8 text-cyan-500" />
+            <Steps className="h-8 w-8 text-gray-700 dark:text-cyan-500" />
           </div>
-          <p className="mb-4 w-full text-sm text-gray-400">
+          <p className="mb-4 w-full text-sm text-gray-800 dark:text-gray-400">
             Minha tragetória profissional como desenvolvedor até o momento.
           </p>
           <a
             href="https://www.linkedin.com/in/c4du-dev/"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-fit py-2 text-base font-semibold text-cyan-100 underline decoration-cyan-400 underline-offset-8 transition hover:text-cyan-400 hover:decoration-cyan-500"
+            className="w-fit py-2 text-base font-semibold text-gray-700 underline decoration-gray-500 underline-offset-8 transition hover:text-gray-800 hover:decoration-cyan-500 dark:text-cyan-100 dark:decoration-cyan-400 dark:hover:text-cyan-400 dark:hover:decoration-cyan-500"
           >
             Ver no Linkedin
           </a>

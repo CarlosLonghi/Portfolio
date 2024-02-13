@@ -25,15 +25,15 @@ export default function RepositoryCard({
   return (
     <motion.article
       variants={card}
-      className="group flex min-h-48 w-60 flex-col rounded border border-cyan-500 px-4 py-5 shadow-inner shadow-cyan-800"
+      className="group flex min-h-48 w-60 flex-col rounded border border-gray-500 bg-gray-400 px-4 py-5 shadow-inner shadow-gray-500 dark:border-cyan-500 dark:bg-transparent dark:shadow-cyan-800"
     >
       <h4 className="mb-2 text-xl font-bold dark:text-cyan-50">{title}</h4>
-      <p className="line-clamp-4 text-sm text-gray-700 dark:text-cyan-100">
+      <p className="line-clamp-4 text-sm text-gray-800 dark:text-cyan-100">
         {description}
       </p>
       <div className="ml-auto mt-auto flex gap-3">
         <a
-          className="rounded-full bg-gray-900 p-2 font-semibold text-gray-500 shadow-md shadow-gray-950 transition duration-300 ease-in hover:shadow-cyan-800 group-hover:text-cyan-500"
+          className="sha rounded-full bg-gray-500 p-2 font-semibold text-gray-100 shadow-inner shadow-gray-600 transition duration-300 ease-in hover:shadow-gray-800 group-hover:text-cyan-500 dark:bg-gray-900 dark:text-gray-500 dark:shadow-md dark:shadow-gray-950 dark:hover:shadow-cyan-800 dark:group-hover:text-cyan-500"
           href={linkGithub}
           target="_blank"
           rel="noopener noreferrer"
@@ -42,7 +42,7 @@ export default function RepositoryCard({
         </a>
         {linkSite && (
           <a
-            className="rounded-full bg-gray-900 p-2 font-semibold text-gray-500 shadow-md shadow-gray-950 transition duration-300 ease-in hover:shadow-cyan-800 group-hover:text-cyan-500"
+            className="rounded-full bg-gray-500 p-2 font-semibold text-gray-100 shadow-inner shadow-gray-600 transition duration-300 ease-in hover:shadow-gray-800 group-hover:text-cyan-500 dark:bg-gray-900 dark:text-gray-500 dark:shadow-md dark:shadow-gray-950 dark:hover:shadow-cyan-800 dark:group-hover:text-cyan-500"
             href={linkSite}
             target="_blank"
             rel="noopener noreferrer"

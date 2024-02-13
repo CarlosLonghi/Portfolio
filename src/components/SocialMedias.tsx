@@ -1,7 +1,7 @@
 export function Github() {
   return (
     <a
-      className="flex items-center gap-1 text-lg font-medium text-gray-800/70 transition duration-300 ease-out hover:text-gray-800 dark:text-gray-400/80 dark:hover:text-cyan-300"
+      className="flex items-center gap-1 text-lg font-medium text-gray-800/70 transition duration-300 ease-out hover:text-gray-800 dark:text-gray-300/50 dark:hover:text-cyan-400"
       href="https://github.com/CarlosLonghi"
       target="_blank"
       rel="noopener noreferrer"
@@ -69,7 +69,7 @@ export function Github() {
 export function Linkedin() {
   return (
     <a
-      className="flex items-center gap-1 text-lg font-medium text-gray-800/70 transition duration-300 ease-out hover:text-gray-800 dark:text-gray-400/80 dark:hover:text-cyan-300"
+      className="flex items-center gap-1 text-lg font-medium text-gray-800/70 transition duration-300 ease-out hover:text-gray-800 dark:text-gray-300/50  dark:hover:text-cyan-400"
       href="https://www.linkedin.com/in/c4du-dev/"
       target="_blank"
       rel="noopener noreferrer"
@@ -139,7 +139,7 @@ export function Linkedin() {
 export function Instagram() {
   return (
     <a
-      className="flex items-center gap-1 text-lg font-medium text-gray-800/70 transition duration-300 ease-out hover:text-gray-800 dark:text-gray-400/80 dark:hover:text-cyan-300"
+      className="flex items-center gap-1 text-lg font-medium text-gray-800/70 transition duration-300 ease-out hover:text-gray-800 dark:text-gray-300/50  dark:hover:text-cyan-400"
       href="https://www.instagram.com/cadu_longhi?igsh=MW04cDdiODhqdDIw"
       target="_blank"
       rel="noopener noreferrer"
