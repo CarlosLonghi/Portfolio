@@ -48,7 +48,7 @@ const animationOrchestration = {
 export default function Home() {
   return (
     <motion.section
-      className="m-auto flex min-h-[calc(100vh-10.47rem)] max-w-app flex-col items-center justify-center gap-10 px-6 pb-8 pt-10 sm:px-10 md:gap-6 md:px-12 md:pt-14"
+      className="m-auto flex min-h-[calc(100vh-10.6rem)] max-w-app flex-col items-center justify-center gap-10 px-6 pb-8 pt-10 sm:px-10 md:gap-6 md:px-12 md:pt-14"
       initial="hidden"
       animate="visible"
       variants={animationOrchestration}
@@ -120,7 +120,7 @@ export default function Home() {
           }}
           className="min-h-0 md:min-h-56"
         >
-          <h2 className="mb-2 text-start text-xl font-medium">
+          <h2 className="mb-1 text-start text-xl font-medium">
             Contribuições no Github
           </h2>
           <a href="https://github.com/CarlosLonghi" target="_blank">

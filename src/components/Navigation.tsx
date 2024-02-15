@@ -24,16 +24,19 @@ const Link = ({ href, ...props }: any) => {
 
 export function Navigation() {
   return (
-    <Collapsible.Root className="fro-gray-100 fixed left-0 right-0 top-0 z-20 flex flex-col justify-center gap-6 bg-gradient-to-b from-gray-300 to-gray-400 px-4 py-6 data-[state=open]:h-screen dark:bg-gradient-to-br dark:from-gray-900 dark:to-gray-950">
+    <Collapsible.Root className="fro-gray-100 sticky left-0 right-0 top-0 z-20 flex flex-col gap-6 bg-gradient-to-b from-gray-300 to-gray-400 px-4 py-2 data-[state=open]:h-screen md:py-6 dark:bg-gradient-to-br dark:from-gray-900 dark:to-gray-950">
       <Collapsible.CollapsibleTrigger asChild className="md:hidden">
         <button className="ml-auto rounded-md bg-gray-900 p-2" type="button">
-          <List className="h-8 w-8 text-cyan-400" />
+          <List className="h-10 w-10 text-cyan-400" />
         </button>
       </Collapsible.CollapsibleTrigger>
 
-      <Collapsible.Content className="flex flex-1 flex-col justify-center gap-5 data-[state=closed]:hidden md:justify-start md:data-[state=closed]:flex">
+      <Collapsible.Content
+        forceMount
+        className="flex flex-1 flex-col justify-center data-[state=closed]:hidden md:flex-row md:data-[state=closed]:flex"
+      >
         <NavigationMenu.Root>
-          <NavigationMenu.List className="flex max-w-app flex-col items-center justify-between gap-12 md:flex-row md:gap-6">
+          <NavigationMenu.List className="flex max-w-app flex-col items-center gap-20 md:flex-row md:gap-6">
             <NavigationMenu.Item>
               <Link href="/">Inicio</Link>
             </NavigationMenu.Item>
