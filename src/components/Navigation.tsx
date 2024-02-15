@@ -1,10 +1,11 @@
 'use client'
 
+import React from 'react'
 import { usePathname } from 'next/navigation'
 import NextLink from 'next/link'
 import * as NavigationMenu from '@radix-ui/react-navigation-menu'
 import * as Collapsible from '@radix-ui/react-collapsible'
-import { List } from '@phosphor-icons/react'
+import { X, List } from '@phosphor-icons/react'
 
 // eslint-disable-next-line
 const Link = ({ href, ...props }: any) => {
@@ -23,11 +24,27 @@ const Link = ({ href, ...props }: any) => {
 }
 
 export function Navigation() {
+  const [open, setOpen] = React.useState(false)
+
+  function handleClose() {
+    setTimeout(() => {
+      setOpen(false)
+    }, 200)
+  }
+
   return (
-    <Collapsible.Root className="fro-gray-100 sticky left-0 right-0 top-0 z-20 flex flex-col gap-6 bg-gradient-to-b from-gray-300 to-gray-400 px-4 py-2 data-[state=open]:h-screen md:py-6 dark:bg-gradient-to-br dark:from-gray-900 dark:to-gray-950">
+    <Collapsible.Root
+      open={open}
+      onOpenChange={setOpen}
+      className="fro-gray-100 sticky left-0 right-0 top-0 z-20 flex flex-col gap-6 bg-gradient-to-b from-gray-300 to-gray-400 px-4 py-2 data-[state=open]:h-screen md:py-6 dark:bg-gradient-to-br dark:from-gray-900 dark:to-gray-950"
+    >
       <Collapsible.CollapsibleTrigger asChild className="md:hidden">
         <button className="ml-auto rounded-md bg-gray-900 p-2" type="button">
-          <List className="h-10 w-10 text-cyan-400" />
+          {open ? (
+            <X className="h-10 w-10 text-cyan-400" />
+          ) : (
+            <List className="h-10 w-10 text-cyan-400" />
+          )}
         </button>
       </Collapsible.CollapsibleTrigger>
 
@@ -38,13 +55,19 @@ export function Navigation() {
         <NavigationMenu.Root>
           <NavigationMenu.List className="flex max-w-app flex-col items-center gap-20 md:flex-row md:gap-6">
             <NavigationMenu.Item>
-              <Link href="/">Inicio</Link>
+              <Link onClick={handleClose} href="/">
+                Inicio
+              </Link>
             </NavigationMenu.Item>
             <NavigationMenu.Item>
-              <Link href="/projects">Projetos</Link>
+              <Link onClick={handleClose} href="/projects">
+                Projetos
+              </Link>
             </NavigationMenu.Item>
             <NavigationMenu.Item>
-              <Link href="/career">Carreira</Link>
+              <Link onClick={handleClose} href="/career">
+                Carreira
+              </Link>
             </NavigationMenu.Item>
           </NavigationMenu.List>
         </NavigationMenu.Root>
