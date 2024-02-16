@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.className}>
       <head />
-      <body className="bg-gradient-to-t from-gray-300 to-gray-500 text-gray-900 antialiased dark:from-gray-950 dark:to-gray-950 dark:text-gray-100">
+      <body className="overflow-x-hidden bg-gradient-to-t from-gray-300 to-gray-500 text-gray-900 antialiased dark:from-gray-950 dark:to-gray-950 dark:text-gray-100">
         <Navigation />
 
         <main className="overflow-x-hidden">{children}</main>
