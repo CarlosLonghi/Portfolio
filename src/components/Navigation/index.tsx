@@ -10,28 +10,6 @@ function useMenuAnimation(isOpen: boolean) {
   const [scope, animate] = useAnimate()
 
   useEffect(() => {
-    const menuAnimations = isOpen
-      ? [
-          [
-            'nav',
-            { transform: 'translateX(0%)' },
-            { ease: [0.08, 0.65, 0.53, 0.96], duration: 0.3 },
-          ],
-          [
-            'li',
-            { transform: 'scale(1)', opacity: 1, filter: 'blur(0px)' },
-            { delay: stagger(0.01), at: '0.1' },
-          ],
-        ]
-      : [
-          [
-            'li',
-            { transform: 'scale(0.5)', opacity: 0, filter: 'blur(10px)' },
-            { delay: stagger(0.01, { from: 'last' }), at: '<' },
-          ],
-          ['nav', { transform: 'translateX(-100%)' }, { at: '0.1' }],
-        ]
-
     animate([
       [
         'path.top',
@@ -44,8 +22,23 @@ function useMenuAnimation(isOpen: boolean) {
         { d: isOpen ? 'M 3 2.5 L 17 16.346' : 'M 2 16.346 L 20 16.346' },
         { at: '<' },
       ],
-      ...menuAnimations,
+
+      [
+        'nav',
+        { transform: isOpen ? 'translateX(0%)' : 'translateX(-100%)' },
+        { ease: [0.08, 0.65, 0.53, 0.96], duration: 0.3 },
+      ],
+      [
+        'li',
+        {
+          transform: isOpen ? 'scale(1)' : 'scale(0.8)',
+          opacity: isOpen ? 1 : 0,
+          filter: isOpen ? 'blur(0px)' : 'blur(10px)',
+        },
+        { delay: stagger(0.08), at: '0.1' },
+      ],
     ])
+    // eslint-disable-next-line
   }, [isOpen])
 
   return scope
