@@ -13,7 +13,7 @@ const Path = (props: any) => (
 export const Toggle = ({ toggle }: any) => (
   <button
     onClick={toggle}
-    className="fixed right-8 top-8 z-20 rounded-full bg-sky-100 p-4 focus:outline-none md:hidden dark:bg-gray-900"
+    className="fixed right-6 top-8 z-20 rounded-full bg-sky-100 p-4 focus:outline-none md:hidden dark:bg-gray-900"
   >
     <svg className="h-6 w-6" viewBox="0 0 20 19">
       <Path
