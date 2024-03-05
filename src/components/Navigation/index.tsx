@@ -52,7 +52,7 @@ export function Navigation() {
   useEffect(() => {
     const handleResize = () => {
       // Check the window width and update isOpen accordingly
-      setIsOpen(window.innerWidth > 768)
+      setIsOpen(window.innerWidth >= 768)
     }
 
     // Initial check
