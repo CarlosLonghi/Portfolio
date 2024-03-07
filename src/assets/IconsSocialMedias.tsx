@@ -1,4 +1,4 @@
-export function Github() {
+export function Github(props: React.SVGProps<SVGSVGElement>) {
   return (
     <a
       className="flex items-center gap-1 text-lg font-medium text-gray-800/70 transition duration-300 ease-out hover:text-gray-800 dark:text-gray-300/50 dark:hover:text-cyan-400"
@@ -13,6 +13,7 @@ export function Github() {
         fill="currentColor"
         viewBox="0 0 256 256"
         data-darkreader-inline-fill=""
+        {...props}
       >
         <rect width="256" height="256" fill="none"></rect>
         <path
@@ -66,7 +67,7 @@ export function Github() {
   )
 }
 
-export function Linkedin() {
+export function Linkedin(props: React.SVGProps<SVGSVGElement>) {
   return (
     <a
       className="flex items-center gap-1 text-lg font-medium text-gray-800/70 transition duration-300 ease-out hover:text-gray-800 dark:text-gray-300/50  dark:hover:text-cyan-400"
@@ -81,6 +82,7 @@ export function Linkedin() {
         fill="currentColor"
         viewBox="0 0 256 256"
         data-darkreader-inline-fill=""
+        {...props}
       >
         <rect width="256" height="256" fill="none"></rect>
         <rect
@@ -136,7 +138,7 @@ export function Linkedin() {
   )
 }
 
-export function Instagram() {
+export function Instagram(props: React.SVGProps<SVGSVGElement>) {
   return (
     <a
       className="flex items-center gap-1 text-lg font-medium text-gray-800/70 transition duration-300 ease-out hover:text-gray-800 dark:text-gray-300/50  dark:hover:text-cyan-400"
@@ -151,6 +153,7 @@ export function Instagram() {
         fill="currentColor"
         viewBox="0 0 256 256"
         data-darkreader-inline-fill=""
+        {...props}
       >
         <rect width="256" height="256" fill="none"></rect>
         <circle
