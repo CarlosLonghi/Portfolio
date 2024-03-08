@@ -71,7 +71,7 @@ const animationOrchestration = {
 export default function Home() {
   return (
     <motion.section
-      className="m-auto flex min-h-[calc(100vh-10.6rem)] max-w-app flex-col items-center gap-12 px-6 pb-8 pt-10 sm:px-10 md:gap-10 md:px-12 md:pt-14"
+      className="m-auto flex min-h-[calc(100vh-10.6rem)] max-w-app flex-col items-center gap-16 px-6 pb-12 pt-10 sm:px-10 md:gap-10 md:px-12 md:pb-8 md:pt-14"
       initial="hidden"
       animate="visible"
       variants={animationOrchestration}

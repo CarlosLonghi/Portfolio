@@ -21,10 +21,11 @@ const Link = ({ href, onClick, ...props }: any) => {
     <NextLink href={href} passHref legacyBehavior>
       <NavigationMenu.Link
         className={twMerge(
-          'border-b-2 border-solid border-transparent px-4 pb-4 text-4xl font-semibold text-gray-800/60 transition duration-200 ease-in',
-          'hover:text-gray-800/90 data-[active]:border-gray-700 data-[active]:text-gray-800',
-          'md:pb-[26px] md:text-lg',
-          'dark:text-cyan-100/50 dark:hover:text-cyan-500 dark:data-[active]:border-cyan-500 dark:data-[active]:text-cyan-400',
+          'rounded-md border-b-2 border-solid border-transparent bg-sky-100 px-20 py-4 text-4xl font-semibold text-gray-800/60 transition duration-200 ease-in',
+          'data-[active]:bg-cyan-600 data-[active]:text-gray-200',
+          'md:px-4 md:pb-[26px] md:text-lg md:hover:text-gray-800/90 md:data-[active]:rounded-none md:data-[active]:border-gray-700 md:data-[active]:text-gray-800',
+          'dark:bg-gray-900/80 dark:text-cyan-100/50  dark:data-[active]:bg-gray-900 dark:data-[active]:text-cyan-400',
+          'md:dark:bg-transparent md:dark:hover:text-cyan-500 md:dark:data-[active]:border-cyan-500 md:dark:data-[active]:bg-transparent',
         )}
         active={isActive}
         onClick={handleLinkClick}
