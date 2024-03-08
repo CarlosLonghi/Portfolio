@@ -1,8 +1,6 @@
 'use client'
-import { delay, motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 import Image from 'next/image'
-import Link from 'next/link'
-import { CaretDoubleRight } from '@phosphor-icons/react'
 import Avatar from '@/assets/avatar.jpeg'
 
 import { IconReact, IconLaravel, IconNodeJs } from '@/assets/IconsTech'
@@ -32,12 +30,12 @@ const animationOpacity = {
 }
 
 const animationRightToLeft = {
-  hidden: { opacity: 0, x: 25 },
+  hidden: { opacity: 0, x: 30 },
   visible: {
     x: 0,
     opacity: 1,
     transition: {
-      duration: 0.8,
+      duration: 0.6,
       ease: 'easeInOut',
     },
   },
@@ -59,7 +57,7 @@ const animationOrchestration = {
     opacity: 1,
     transition: {
       when: 'beforeChildren',
-      staggerChildren: 0.4,
+      staggerChildren: 0.2,
     },
   },
   hidden: {
@@ -73,12 +71,15 @@ const animationOrchestration = {
 export default function Home() {
   return (
     <motion.section
-      className="m-auto flex min-h-[calc(100vh-10.6rem)] max-w-app flex-col items-center gap-10 px-6 pb-8 pt-10 sm:px-10 md:gap-8 md:px-12 md:pt-14"
+      className="m-auto flex min-h-[calc(100vh-10.6rem)] max-w-app flex-col items-center gap-12 px-6 pb-8 pt-10 sm:px-10 md:gap-10 md:px-12 md:pt-14"
       initial="hidden"
       animate="visible"
       variants={animationOrchestration}
     >
-      <div className="flex flex-col items-center gap-4 text-center md:flex-row md:gap-8 md:text-start">
+      <motion.div
+        variants={animationOrchestration}
+        className="flex flex-col items-center gap-4 text-center md:flex-row md:gap-8 md:text-start"
+      >
         <motion.a
           className="h-32 w-32 overflow-hidden rounded-full border-2 border-cyan-300 transition-shadow duration-700 ease-out hover:shadow-2xl hover:shadow-cyan-600 md:h-40 md:w-40"
           href="https://github.com/CarlosLonghi"
@@ -110,46 +111,41 @@ export default function Home() {
             , e atualmente estou buscando minha vaga Home Office.🏡
           </p>
         </motion.div>
-      </div>
+      </motion.div>
 
       <motion.div
+        className="flex w-full flex-col gap-2 sm:w-4/6 md:w-1/2 lg:w-7/12"
         variants={animationOrchestration}
-        className="flex items-center gap-8"
       >
-        <motion.div variants={animationRightToLeft}>
-          <IconReact className="h-12 w-12 text-cyan-300" />
-        </motion.div>
+        <motion.h2
+          className="text-center text-lg font-medium text-gray-800 md:text-start dark:text-cyan-500"
+          variants={animationOpacity}
+        >
+          Principais Stacks
+        </motion.h2>
+        <motion.div
+          variants={animationOrchestration}
+          className="flex items-center justify-center gap-8"
+        >
+          <motion.div variants={animationRightToLeft}>
+            <IconReact />
+          </motion.div>
 
-        <motion.div variants={animationRightToLeft}>
-          <IconNodeJs className="h-12 w-12 text-green-600" />
-        </motion.div>
+          <motion.div variants={animationRightToLeft}>
+            <IconNodeJs />
+          </motion.div>
 
-        <motion.div variants={animationRightToLeft}>
-          <IconLaravel className="h-12 w-12 text-orange-600" />
+          <motion.div variants={animationRightToLeft}>
+            <IconLaravel />
+          </motion.div>
         </motion.div>
       </motion.div>
 
-      {/* <motion.div
-        variants={animationRightToLeft}
-        whileTap={{
-          scale: 0.95,
-          transition: { duration: 0.2 },
-        }}
-      >
-        <Link
-          href="/projects"
-          className="flex items-center gap-2 rounded bg-gray-600 px-4 py-3 font-semibold text-gray-300 transition duration-200 ease-in hover:text-cyan-400 dark:bg-gradient-to-r dark:from-gray-900 dark:to-gray-700"
-        >
-          Meus Projetos
-          <CaretDoubleRight className="h-5 w-5" weight="bold" />
-        </Link>
-      </motion.div> */}
-
       <motion.div
-        className="flex min-h-0 w-full flex-col gap-1 text-gray-800 sm:w-4/6 md:min-h-56 md:w-1/2 lg:w-7/12 dark:text-cyan-500"
+        className="flex min-h-0 w-full flex-col gap-2 text-gray-800 sm:w-4/6 md:min-h-56 md:w-1/2 lg:w-7/12 dark:text-cyan-500"
         variants={animationOpacity}
       >
-        <h2 className="mb-1 text-center text-lg font-medium md:text-start">
+        <h2 className="text-center text-lg font-medium md:text-start">
           Contribuições no Github
         </h2>
         <a href="https://github.com/CarlosLonghi" target="_blank">
