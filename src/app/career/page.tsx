@@ -76,8 +76,7 @@ export default function Carrer() {
             contractMode="Full-time"
             contractStart="Abril de 2023"
             contractEnd="Presente"
-            taskDescription="Criar novas páginas web gerenciáveis, adicionar novas features e dar
-            manutenção aos sistemas existentes."
+            taskDescription="Responsável por criar novas páginas Web responsivas e gerenciáveis, utilizando Laravel, Jquery, Bootstrap e Sass. Além de adicionar novas features e funcionalidades aos sistemas mais legados existentes, como em Angular.JS, Codeigniter, entre outros."
           />
         </motion.div>
       </div>
