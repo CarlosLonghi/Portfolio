@@ -1,11 +1,26 @@
-export function Github(props: React.SVGProps<SVGSVGElement>) {
+interface SocialMediaLinksProps {
+  children: React.ReactNode
+  link: string
+  name: string
+}
+
+const SocialMediaLink = ({ children, link, name }: SocialMediaLinksProps) => {
   return (
     <a
       className="flex items-center gap-1 text-lg font-medium text-gray-800/70 transition duration-300 ease-out hover:text-gray-800 dark:text-gray-300/50 dark:hover:text-cyan-400"
-      href="https://github.com/CarlosLonghi"
+      href={link}
       target="_blank"
       rel="noopener noreferrer"
     >
+      {children}
+      <span className="hidden sm:block">{name}</span>
+    </a>
+  )
+}
+
+export function Github(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <SocialMediaLink name="Github" link="https://github.com/CarlosLonghi">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="30"
@@ -62,18 +77,15 @@ export function Github(props: React.SVGProps<SVGSVGElement>) {
           data-darkreader-inline-stroke=""
         ></path>
       </svg>
-      <span className="hidden sm:block">Github</span>
-    </a>
+    </SocialMediaLink>
   )
 }
 
 export function Linkedin(props: React.SVGProps<SVGSVGElement>) {
   return (
-    <a
-      className="flex items-center gap-1 text-lg font-medium text-gray-800/70 transition duration-300 ease-out hover:text-gray-800 dark:text-gray-300/50  dark:hover:text-cyan-400"
-      href="https://www.linkedin.com/in/c4du-dev/"
-      target="_blank"
-      rel="noopener noreferrer"
+    <SocialMediaLink
+      name="Linkedin"
+      link="https://www.linkedin.com/in/c4du-dev"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -133,18 +145,15 @@ export function Linkedin(props: React.SVGProps<SVGSVGElement>) {
         ></path>
         <circle cx="88" cy="80" r="12"></circle>
       </svg>
-      <span className="hidden sm:block">Linkedin</span>
-    </a>
+    </SocialMediaLink>
   )
 }
 
 export function Instagram(props: React.SVGProps<SVGSVGElement>) {
   return (
-    <a
-      className="flex items-center gap-1 text-lg font-medium text-gray-800/70 transition duration-300 ease-out hover:text-gray-800 dark:text-gray-300/50  dark:hover:text-cyan-400"
-      href="https://www.instagram.com/cadu_longhi?igsh=MW04cDdiODhqdDIw"
-      target="_blank"
-      rel="noopener noreferrer"
+    <SocialMediaLink
+      name="Instagram"
+      link="https://www.instagram.com/cadu_longhi?igsh=MW04cDdiODhqdDIw"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -181,7 +190,6 @@ export function Instagram(props: React.SVGProps<SVGSVGElement>) {
         ></rect>
         <circle cx="180" cy="76" r="12"></circle>
       </svg>
-      <span className="hidden sm:block">Instagram</span>
-    </a>
+    </SocialMediaLink>
   )
 }

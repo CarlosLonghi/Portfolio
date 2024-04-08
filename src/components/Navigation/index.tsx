@@ -44,7 +44,7 @@ function useMenuAnimation(isOpen: boolean) {
   return scope
 }
 
-export function Navigation() {
+export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
 
   const scope = useMenuAnimation(isOpen)

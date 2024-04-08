@@ -17,7 +17,7 @@ const card = {
   },
 }
 
-export default function RepositoryCard({
+export function RepositoryCard({
   title,
   description,
   linkSite,

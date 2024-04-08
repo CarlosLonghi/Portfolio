@@ -1,9 +1,9 @@
 'use client'
+
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Avatar from '@/assets/avatar.jpeg'
-
-import { IconReact, IconLaravel, IconNodeJs } from '@/assets/IconsTech'
+import { MainStacks } from '@/components/MainStacks'
 
 const animationAvatar = {
   hidden: { opacity: 0, scale: 0.5 },
@@ -25,18 +25,6 @@ const animationOpacity = {
     transition: {
       duration: 0.8,
       ease: 'backIn',
-    },
-  },
-}
-
-const animationRightToLeft = {
-  hidden: { opacity: 0, x: 30 },
-  visible: {
-    x: 0,
-    opacity: 1,
-    transition: {
-      duration: 0.6,
-      ease: 'easeInOut',
     },
   },
 }
@@ -116,33 +104,7 @@ export default function Home() {
         className="flex w-full flex-col items-center gap-16 md:gap-14"
         variants={animationOrchestration}
       >
-        <motion.div
-          className="flex flex-col gap-2 sm:w-4/6 md:w-1/2 lg:w-7/12"
-          variants={animationOrchestration}
-        >
-          <motion.h2
-            className="text-center text-lg font-medium text-gray-800 md:text-start dark:text-cyan-500"
-            variants={animationOpacity}
-          >
-            Principais Stacks
-          </motion.h2>
-          <motion.div
-            variants={animationOrchestration}
-            className="flex items-center justify-center gap-8"
-          >
-            <motion.div variants={animationRightToLeft}>
-              <IconReact />
-            </motion.div>
-
-            <motion.div variants={animationRightToLeft}>
-              <IconNodeJs />
-            </motion.div>
-
-            <motion.div variants={animationRightToLeft}>
-              <IconLaravel />
-            </motion.div>
-          </motion.div>
-        </motion.div>
+        <MainStacks />
 
         <motion.div
           className="flex min-h-0 w-full flex-col gap-2 text-gray-800 sm:w-4/6 md:min-h-56 md:w-1/2 lg:w-7/12 dark:text-cyan-500"

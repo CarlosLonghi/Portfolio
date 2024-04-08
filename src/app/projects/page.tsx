@@ -1,5 +1,5 @@
 'use client'
-import RepositoryCard from '@/components/RepositoryCard'
+import { RepositoryCard } from '@/components/RepositoryCard'
 import { GithubLogo } from '@phosphor-icons/react'
 import { motion } from 'framer-motion'
 
