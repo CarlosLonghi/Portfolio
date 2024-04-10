@@ -7,7 +7,7 @@ const animationRightToLeft = {
     x: 0,
     opacity: 1,
     transition: {
-      duration: 0.5,
+      duration: 1,
       ease: 'easeInOut',
     },
   },
@@ -18,7 +18,7 @@ const animationOrchestration = {
     opacity: 1,
     transition: {
       when: 'beforeChildren',
-      staggerChildren: 0.4,
+      staggerChildren: 0.25,
     },
   },
   hidden: {
@@ -35,18 +35,16 @@ const animationOpacity = {
     opacity: 1,
     scale: 1,
     transition: {
-      duration: 0.8,
-      ease: 'backIn',
+      duration: 0.3,
+      ease: 'easeInOut',
+      delay: 0.5,
     },
   },
 }
 
 export function MainStacks() {
   return (
-    <motion.div
-      className="flex flex-col gap-2 sm:w-4/6 md:w-1/2 lg:w-7/12"
-      variants={animationOrchestration}
-    >
+    <div className="flex flex-col gap-2 sm:w-4/6 md:w-1/2 lg:w-7/12">
       <motion.h2
         className="text-center text-lg font-medium text-gray-800 md:text-start dark:text-cyan-500"
         variants={animationOpacity}
@@ -69,6 +67,6 @@ export function MainStacks() {
           <IconLaravel />
         </motion.div>
       </motion.div>
-    </motion.div>
+    </div>
   )
 }

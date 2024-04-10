@@ -5,6 +5,9 @@ import Image from 'next/image'
 import Avatar from '@/assets/avatar.jpeg'
 import { MainStacks } from '@/components/MainStacks'
 
+import dynamic from 'next/dynamic'
+const DynamicGithubStats = dynamic(() => import('@/components/GithubStats'))
+
 const animationAvatar = {
   hidden: { opacity: 0, scale: 0.5 },
   visible: {
@@ -18,23 +21,11 @@ const animationAvatar = {
 }
 
 const animationOpacity = {
-  hidden: { opacity: 0, scale: 1 },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    transition: {
-      duration: 0.8,
-      ease: 'backIn',
-    },
-  },
-}
-
-const animationTopToBottom = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
     transition: {
-      duration: 0.6,
+      duration: 0.3,
       ease: 'easeIn',
     },
   },
@@ -77,7 +68,7 @@ export default function Home() {
           <Image src={Avatar} alt="Avatar" />
         </motion.a>
 
-        <motion.div variants={animationTopToBottom} className="md:flex-1">
+        <motion.div variants={animationOpacity} className="md:flex-1">
           <h2 className="mb-4 text-2xl font-semibold md:text-3xl">
             Olá<span className="text-cyan-500 dark:text-cyan-300">,</span>
             <br /> sou Carlos Longhi
@@ -106,22 +97,7 @@ export default function Home() {
       >
         <MainStacks />
 
-        <motion.div
-          className="flex min-h-0 w-full flex-col gap-2 text-gray-800 sm:w-4/6 md:min-h-56 md:w-1/2 lg:w-7/12 dark:text-cyan-500"
-          variants={animationOpacity}
-        >
-          <h2 className="text-center text-lg font-medium md:text-start">
-            Contribuições no Github
-          </h2>
-          <a href="https://github.com/CarlosLonghi" target="_blank">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="https://github-readme-streak-stats.herokuapp.com?user=CarlosLonghi&border_radius=5&locale=pt_BR&date_format=j%20M%5B%20Y%5D&mode=weekly&background=transparent&stroke=06B6D4&border=transparent&ring=22D3EE&sideNums=A5F3FC&sideLabels=22D3EE&dates=CFFAFE&currStreakNum=CFFAFE&fire=EA580C&currStreakLabel=22D3EE"
-              alt="GitHub Streak"
-              className="w-full rounded-md border border-cyan-600 bg-gradient-to-b from-gray-400 to-gray-600 shadow-lg shadow-cyan-950 transition-shadow duration-700 ease-out dark:from-transparent dark:to-transparent"
-            />
-          </a>
-        </motion.div>
+        <DynamicGithubStats />
       </motion.div>
     </motion.section>
   )

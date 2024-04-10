@@ -31,11 +31,11 @@ function useMenuAnimation(isOpen: boolean) {
       [
         'li',
         {
-          transform: isOpen ? 'scale(1)' : 'scale(0.9)',
+          transform: isOpen ? 'scale(1)' : 'scale(0.8)',
           opacity: isOpen ? 1 : 0,
           filter: isOpen ? 'blur(0px)' : 'blur(10px)',
         },
-        { delay: stagger(0.05), at: '0.1' },
+        { delay: stagger(0.03), at: '0.1' },
       ],
     ])
     // eslint-disable-next-line
