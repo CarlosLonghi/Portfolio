@@ -1,9 +1,10 @@
 'use client'
 
-import { motion } from 'framer-motion'
-import { CareerCard } from '@/components/CareerCard'
 import { Steps } from '@phosphor-icons/react'
+import { motion } from 'framer-motion'
+
 import DigitalOneLogo from '@/assets/digitalone_agencia_logo.jpeg'
+import { CareerCard } from '@/components/CareerCard'
 
 const animationOrchestration = {
   visible: {

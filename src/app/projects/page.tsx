@@ -1,7 +1,9 @@
 'use client'
-import { RepositoryCard } from '@/components/RepositoryCard'
+
 import { GithubLogo } from '@phosphor-icons/react'
 import { motion } from 'framer-motion'
+
+import { RepositoryCard } from '@/components/RepositoryCard'
 
 const animationOrchestration = {
   visible: {

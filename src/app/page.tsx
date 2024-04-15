@@ -1,11 +1,11 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import dynamic from 'next/dynamic'
 import Image from 'next/image'
+
 import Avatar from '@/assets/avatar.jpeg'
 import { MainStacks } from '@/components/MainStacks'
-
-import dynamic from 'next/dynamic'
 const DynamicGithubStats = dynamic(() => import('@/components/GithubStats'))
 
 const animationAvatar = {

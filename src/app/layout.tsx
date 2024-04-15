@@ -1,8 +1,8 @@
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import './globals.css'
 
+import type { Metadata } from 'next'
 import dynamic from 'next/dynamic'
+import { Inter } from 'next/font/google'
 const DynamicFooter = dynamic(() => import('@/components/Footer'))
 const DynamicNavigation = dynamic(() => import('@/components/Navigation'))
 

@@ -1,8 +1,8 @@
 'use cliet'
 
+import * as NavigationMenu from '@radix-ui/react-navigation-menu'
 import NextLink from 'next/link'
 import { usePathname } from 'next/navigation'
-import * as NavigationMenu from '@radix-ui/react-navigation-menu'
 import { twMerge } from 'tailwind-merge'
 
 // eslint-disable-next-line

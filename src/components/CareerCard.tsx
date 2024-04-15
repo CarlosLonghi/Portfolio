@@ -1,8 +1,8 @@
 'use client'
 
+import { DotOutline } from '@phosphor-icons/react'
 import { motion } from 'framer-motion'
 import Image, { StaticImageData } from 'next/image'
-import { DotOutline } from '@phosphor-icons/react'
 
 interface CareerCardProps {
   image: StaticImageData
@@ -51,6 +51,7 @@ export function CareerCard({
             href={companySite}
             target="_blank"
             className="border-cyan-600 text-gray-800 underline decoration-cyan-500 underline-offset-4 transition hover:decoration-cyan-400 dark:border-cyan-500 dark:text-gray-200 dark:hover:text-cyan-500"
+            rel="noreferrer"
           >
             {companyTitle}
           </a>

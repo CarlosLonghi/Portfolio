@@ -22,7 +22,11 @@ export default function GithubStats() {
       <h2 className="text-center text-lg font-medium md:text-start">
         Contribuições no Github
       </h2>
-      <a href="https://github.com/CarlosLonghi" target="_blank">
+      <a
+        href="https://github.com/CarlosLonghi"
+        target="_blank"
+        rel="noreferrer"
+      >
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="https://github-readme-streak-stats.herokuapp.com?user=CarlosLonghi&border_radius=5&locale=pt_BR&date_format=j%20M%5B%20Y%5D&mode=weekly&background=transparent&stroke=06B6D4&border=transparent&ring=22D3EE&sideNums=A5F3FC&sideLabels=22D3EE&dates=CFFAFE&currStreakNum=CFFAFE&fire=EA580C&currStreakLabel=22D3EE"

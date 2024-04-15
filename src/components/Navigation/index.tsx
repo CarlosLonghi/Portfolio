@@ -1,8 +1,8 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
+import { stagger, useAnimate } from 'framer-motion'
+import React, { useEffect, useState } from 'react'
 
-import { useAnimate, stagger } from 'framer-motion'
 import { Nav } from './Nav'
 import { Toggle } from './Toggle'
 

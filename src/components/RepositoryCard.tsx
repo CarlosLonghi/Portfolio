@@ -1,5 +1,5 @@
-import { motion } from 'framer-motion'
 import { GithubLogo, Globe } from '@phosphor-icons/react'
+import { motion } from 'framer-motion'
 import { twMerge } from 'tailwind-merge'
 
 interface RepositoryCardProps {

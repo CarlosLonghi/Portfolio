@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
-import { IconReact, IconLaravel, IconNodeJs } from './StacksIcons'
+
+import { IconLaravel, IconNodeJs, IconReact } from './StacksIcons'
 
 const animationRightToLeft = {
   hidden: { opacity: 0, x: 60 },
