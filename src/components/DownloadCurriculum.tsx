@@ -13,7 +13,7 @@ export function DownloadCurriculum() {
       ) : (
         <a
           className="flex cursor-pointer items-center justify-center gap-2 rounded-md bg-cyan-900 py-3 md:w-1/2"
-          href="pdf/curriculum.pdf"
+          href="pdf/CarlosLonghi_CV.pdf"
           download={'CarlosLonghi_CV.pdf'}
         >
           Fazer Download
