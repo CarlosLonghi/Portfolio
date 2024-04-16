@@ -5,6 +5,7 @@ import { motion } from 'framer-motion'
 
 import DigitalOneLogo from '@/assets/digitalone_agencia_logo.jpeg'
 import { CareerCard } from '@/components/CareerCard'
+import { DownloadCurriculum } from '@/components/DownloadCurriculum'
 
 const animationOrchestration = {
   visible: {
@@ -81,6 +82,8 @@ export default function Carrer() {
           />
         </motion.div>
       </div>
+
+      <DownloadCurriculum />
     </motion.section>
   )
 }
