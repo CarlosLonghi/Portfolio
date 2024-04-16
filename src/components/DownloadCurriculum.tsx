@@ -7,14 +7,16 @@ export function DownloadCurriculum() {
   const reCaptchaSiteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ''
 
   function handleDownload() {
-    const recaptchaValue = recaptchaRef.current.getValue()
+    if (recaptchaRef.current) {
+      const recaptchaValue = recaptchaRef.current.getValue()
 
-    if (recaptchaValue) {
-      console.log('recaptcha Validado')
-      // O usuário passou no teste do CAPTCHA, faça o download do PDF
-    } else {
-      console.log('recaptcha Reprovado')
-      // O usuário não passou no teste do CAPTCHA, mostre uma mensagem de erro
+      if (recaptchaValue) {
+        console.log('recaptcha Validado')
+        // O usuário passou no teste do CAPTCHA, faça o download do PDF
+      } else {
+        console.log('recaptcha Reprovado')
+        // O usuário não passou no teste do CAPTCHA, mostre uma mensagem de erro
+      }
     }
   }
 
