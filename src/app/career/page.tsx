@@ -1,19 +1,19 @@
 'use client'
 
-import { Steps } from '@phosphor-icons/react'
+import { ReadCvLogo, Steps } from '@phosphor-icons/react'
 import { motion } from 'framer-motion'
 
-import DigitalOneLogo from '@/assets/digitalone_agencia_logo.jpeg'
+import DigitalOneLogo from '@/assets/images/digitalone_agencia_logo.jpeg'
 import { CareerCard } from '@/components/CareerCard'
-// import { DownloadCurriculum } from '@/components/DownloadCurriculum'
+import { DownloadCurriculum } from '@/components/DownloadCurriculum'
 
 const animationOrchestration = {
   visible: {
     opacity: 1,
     transition: {
       when: 'beforeChildren',
-      staggerChildren: 0.3,
-      delay: 0.4,
+      staggerChildren: 0.6,
+      delay: 0.2,
     },
   },
   hidden: {
@@ -24,8 +24,21 @@ const animationOrchestration = {
   },
 }
 
-const animationLeftToRight = {
+const animationBottomToTop = {
   hidden: { opacity: 0, x: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    x: 0,
+    transition: {
+      ease: 'easeInOut',
+      duration: 0.8,
+    },
+  },
+}
+
+const animationTopToBottom = {
+  hidden: { opacity: 0, y: -30 },
   visible: {
     opacity: 1,
     y: 0,
@@ -44,8 +57,11 @@ export default function Carrer() {
       initial="hidden"
       animate="visible"
     >
-      <div className="space-y-10 rounded-lg">
-        <motion.div className="md:w-1/2" variants={animationLeftToRight}>
+      <motion.div
+        variants={animationOrchestration}
+        className="space-y-12 rounded-lg"
+      >
+        <motion.div className="md:w-1/2" variants={animationBottomToTop}>
           <div className="flex items-center gap-4">
             <h2 className="mb-2 text-2xl font-semibold md:text-3xl">
               Carreira
@@ -81,9 +97,25 @@ export default function Carrer() {
             taskDescription="Responsável por criar novas páginas Web responsivas e gerenciáveis, utilizando Laravel, Jquery, Bootstrap e Sass. Além de adicionar novas features e funcionalidades aos sistemas mais legados existentes, como em Angular.JS, Codeigniter, entre outros."
           />
         </motion.div>
-      </div>
 
-      {/* <DownloadCurriculum /> */}
+        <motion.div
+          className="flex flex-col gap-4"
+          variants={animationTopToBottom}
+        >
+          <div className="space-y-1">
+            <div className="flex items-center gap-2">
+              <h2 className="text-lg font-semibold md:text-xl">
+                Meu Currículo
+              </h2>
+              <ReadCvLogo className="h-6 w-6 text-gray-700 dark:text-cyan-500" />
+            </div>
+            <p className="w-full text-sm text-gray-800 dark:text-gray-400">
+              Faça o Download do meu Currículo abaixo.
+            </p>
+          </div>
+          <DownloadCurriculum />
+        </motion.div>
+      </motion.div>
     </motion.section>
   )
 }

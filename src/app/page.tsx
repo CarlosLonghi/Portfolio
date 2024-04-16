@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import dynamic from 'next/dynamic'
 import Image from 'next/image'
 
-import Avatar from '@/assets/avatar.jpeg'
+import Avatar from '@/assets/images/avatar.jpeg'
 import { MainStacks } from '@/components/MainStacks'
 const DynamicGithubStats = dynamic(() => import('@/components/GithubStats'))
 

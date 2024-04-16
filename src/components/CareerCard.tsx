@@ -42,7 +42,7 @@ export function CareerCard({
         src={image}
         alt="Logo Digital One"
       />
-      <div className="flex flex-col items-start gap-2 text-sm">
+      <div className="flex flex-col items-start gap-2 text-sm md:w-1/2">
         <h4 className="text-nowrap text-base font-semibold text-gray-800 sm:text-lg dark:text-gray-200">
           {role}
         </h4>
@@ -79,7 +79,7 @@ export function CareerCard({
         <span className="font-medium text-gray-800 dark:text-gray-300">
           {companyLocation}
         </span>
-        <p className="text-sm text-gray-700 md:w-1/2 dark:text-gray-400">
+        <p className="text-sm text-gray-700 dark:text-gray-400">
           {taskDescription}
         </p>
       </div>
