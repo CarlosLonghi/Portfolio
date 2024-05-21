@@ -102,11 +102,21 @@ export default function Carrer() {
               </h2>
               <ReadCvLogo className="h-6 w-6 text-gray-700 dark:text-cyan-500" />
             </div>
-            <p className="w-full text-sm text-gray-800 dark:text-gray-400">
-              Faça o Download do meu Currículo abaixo.
+            <p className="w-1/2 text-sm text-gray-800 dark:text-gray-400">
+              Valide o{' '}
+              <a
+                href="https://www.google.com/recaptcha/about/"
+                target="_blank"
+                className="text-cyan-600 underline-offset-2 hover:underline dark:text-cyan-500"
+                rel="noreferrer"
+                title="Saiba mais sobre reCAPTCHA"
+              >
+                reCAPTCHA
+              </a>{' '}
+              abaixo para fazer o Download de meu Currículo.
             </p>
           </div>
-          <DownloadCurriculum />
+          {/* <DownloadCurriculum /> */}
         </motion.div>
       </motion.div>
     </motion.section>
