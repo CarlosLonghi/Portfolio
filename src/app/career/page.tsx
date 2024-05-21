@@ -116,7 +116,7 @@ export default function Carrer() {
               abaixo para fazer o Download de meu Currículo.
             </p>
           </div>
-          {/* <DownloadCurriculum /> */}
+          <DownloadCurriculum />
         </motion.div>
       </motion.div>
     </motion.section>
