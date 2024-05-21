@@ -11,7 +11,7 @@ const animationOrchestration = {
     transition: {
       when: 'beforeChildren',
       staggerChildren: 0.2,
-      delay: 0.4,
+      delay: 0.3,
     },
   },
   hidden: {
