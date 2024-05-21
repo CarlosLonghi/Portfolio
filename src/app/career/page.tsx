@@ -107,13 +107,13 @@ export default function Carrer() {
               <a
                 href="https://www.google.com/recaptcha/about/"
                 target="_blank"
-                className="text-cyan-600 underline-offset-2 hover:underline dark:text-cyan-500"
+                className="text-cyan-600 dark:text-cyan-500"
                 rel="noreferrer"
                 title="Saiba mais sobre reCAPTCHA"
               >
                 reCAPTCHA
               </a>{' '}
-              abaixo para fazer o Download de meu Currículo.
+              abaixo para fazer o download do currículo.
             </p>
           </div>
           <DownloadCurriculum />
